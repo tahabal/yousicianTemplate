@@ -12,6 +12,7 @@ class Store {
   isSearchFilterActive = false;
   loadedDataCount = 0;
   currentLevelFilterValue = null;
+  scrollFetchLastCallTime = new Date();
 
   handleSearch(keyword) {
     this.searchKeyword = keyword;
@@ -86,28 +87,44 @@ class Store {
     }
 
     let moreData;
+    let container;
     switch (this.isSearchFilterActive) {
       case true:
-        moreData = data
-          .filter(
-            val =>
-              val.title
-                .toLocaleLowerCase("en-EN")
-                .includes(this.searchKeyword) ||
-              val.artist.toLocaleLowerCase("en-EN").includes(this.searchKeyword)
-          )
-          .slice(this.loadedDataCount, this.loadedDataCount + 15);
-        this.data = this.data.concat(moreData);
+        moreData = this.filterByKeyword(data);
+        this.currentLevelFilterValue &&
+          (moreData = this.filterByLevel(moreData));
+
+        container = moreData.slice(
+          this.loadedDataCount,
+          this.loadedDataCount + 15
+        );
+        this.data = this.data.concat(container);
         this.loadedDataCount = this.data.length;
         break;
       case false:
-        moreData = data.slice(this.loadedDataCount, this.loadedDataCount + 15);
+        container = data;
+        this.currentLevelFilterValue && (container = this.filterByLevel(data));
+
+        if (container.length <= this.loadedDataCount) {
+          break;
+        }
+
+        moreData = container.slice(
+          this.loadedDataCount,
+          this.loadedDataCount + 15
+        );
+
         this.data = this.data.concat(moreData);
         this.loadedDataCount = this.data.length;
         break;
       default:
         break;
     }
+  }
+
+  //scroll fetch call time updater
+  updateFetchCallTime() {
+    this.scrollFetchLastCallTime = new Date();
   }
 
   //shows list loader
@@ -133,6 +150,8 @@ class Store {
 
 decorate(Store, {
   searchKeyword: observable,
+  scrollFetchLastCallTime: observable,
+  updateFetchCallTime: action,
   currentLevelFilterValue: observable,
   changeLevelFilter: action,
   handleSearch: action,

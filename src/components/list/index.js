@@ -25,9 +25,18 @@ class List extends Component {
     let height = el.offsetHeight;
     let offset = height - scrollY;
 
-    if (offset === 0) {
+    //used to keep scroll request in check
+    let time = new Date();
+    let lastExecutedTimeCheck = time - this.props.store.scrollFetchLastCallTime;
+
+    if (
+      offset === 0 &&
+      !this.props.store.loading &&
+      lastExecutedTimeCheck > 5000
+    ) {
       //mimic even more lag like we're still rollin' with them 56k's
       this.props.store.showLoader();
+      this.props.store.updateFetchCallTime();
       const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
       await fauxLag(500);
 
