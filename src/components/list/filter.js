@@ -6,14 +6,21 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./list.css";
 
 class ListFilter extends Component {
-  handleClick = (selectedLevel, event) => {
+  handleClick = async (selectedLevel, event) => {
     let isActive = this.props.store.currentLevelFilterValue === selectedLevel;
+
+    this.props.store.showLoader();
+    //mimic some network lag
+    const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
+    await fauxLag(400);
 
     if (isActive) {
       this.props.store.changeLevelFilter(null);
     } else {
       this.props.store.changeLevelFilter(selectedLevel);
     }
+
+    this.props.store.hideLoader();
   };
 
   renderFilterItems = () => {

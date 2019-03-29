@@ -7,7 +7,8 @@ configure({ enforceActions: "observed" });
 class Store {
   searchKeyword = "";
   data = [];
-  loading = true;
+  loading = false;
+  starting = false;
   isSearchFilterActive = false;
   loadedDataCount = 0;
   currentLevelFilterValue = null;
@@ -109,14 +110,24 @@ class Store {
     }
   }
 
-  //shows application-wide loader
+  //shows list loader
   showLoader() {
     this.loading = true;
   }
 
-  //hides said loader
+  //hides list loader
   hideLoader() {
     this.loading = false;
+  }
+
+  //shows fullscreen loader
+  showFullLoader() {
+    this.starting = true;
+  }
+
+  //hides fullscreen loader
+  hideFullLoader() {
+    this.starting = false;
   }
 }
 
@@ -126,11 +137,14 @@ decorate(Store, {
   changeLevelFilter: action,
   handleSearch: action,
   loading: observable,
+  starting: observable,
   data: observable,
   fetchMore: action,
   fetchData: action,
   showLoader: action,
-  hideLoader: action
+  hideLoader: action,
+  showFullLoader: action,
+  hideFullLoader: action
 });
 
 const appStore = new Store();

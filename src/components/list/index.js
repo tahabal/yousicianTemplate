@@ -9,12 +9,13 @@ class List extends Component {
   listContainerRef = React.createRef();
 
   async componentDidMount() {
+    this.props.store.showFullLoader();
     //mimic some network lag
     const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
     await fauxLag(1000);
 
     this.props.store.fetchData();
-    this.props.store.hideLoader();
+    this.props.store.hideFullLoader();
   }
 
   handleScroll = async () => {
@@ -54,6 +55,11 @@ class List extends Component {
           onScroll={this.handleScroll}
         >
           {this.renderListItems()}
+          {this.props.store.loading && (
+            <div className="list-item-loading">
+              <span>Loading...</span>
+            </div>
+          )}
         </div>
       </div>
     );

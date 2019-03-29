@@ -8,7 +8,7 @@ import Loading from "./components/loading";
 class App extends Component {
   render() {
     const renderLoading = () => {
-      return this.props.store.loading && <Loading />;
+      return this.props.store.starting && <Loading />;
     };
 
     return (

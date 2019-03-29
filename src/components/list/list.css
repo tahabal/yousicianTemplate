@@ -80,6 +80,18 @@
     justify-content: center;
     align-items: center;
 }
+.list-item-loading {
+    position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding: 5px;
+  border-bottom: 1px solid var(--theme-list-seperator-color);
+  transition: 0.2s all;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .list-item-container {
   position: relative;
