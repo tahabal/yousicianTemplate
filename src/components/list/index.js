@@ -9,6 +9,8 @@ class List extends Component {
   render() {
     const data = appStore.data;
 
+    console.log(data);
+
     return <div />;
   }
 }
