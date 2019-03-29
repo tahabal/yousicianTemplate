@@ -14,8 +14,8 @@ class List extends Component {
 
     //mimic some network lag
     const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
-
     await fauxLag(1000);
+
     this.props.store.fetchData();
     this.props.store.hideLoader();
   }
@@ -26,14 +26,21 @@ class List extends Component {
       .removeEventlistener("scroll", this.handleScroll, false);
   }
 
-  handleScroll = () => {
+  handleScroll = async () => {
+    //get list element for scroll purposes, calculate stuff
     const el = document.querySelector(".list-container");
     let scrollY = el.scrollHeight - el.scrollTop;
     let height = el.offsetHeight;
     let offset = height - scrollY;
 
     if (offset === 0) {
+      //mimic even more lag like we're still rollin' with them 56k's
+      this.props.store.showLoader();
+      const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
+      await fauxLag(500);
+
       this.props.store.fetchMore();
+      this.props.store.hideLoader();
     }
   };
 
