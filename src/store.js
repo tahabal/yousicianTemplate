@@ -1,4 +1,5 @@
 import { decorate, observable, action, configure } from "mobx";
+import debounce from "lodash/debounce";
 import data from "./songs.json";
 
 configure({ enforceActions: "observed" });
@@ -18,8 +19,12 @@ class Store {
     } else {
       this.isSearchFilterActive = true;
     }
-    this.fetchData();
+
+    this.debouncedFetch();
   }
+
+  //to prevent a request at every typing action
+  debouncedFetch = debounce(this.fetchData, 1000);
 
   //level filter handler
   changeLevelFilter(val) {
