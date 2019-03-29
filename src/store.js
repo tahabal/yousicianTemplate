@@ -1,4 +1,5 @@
 import { decorate, observable, action, configure } from "mobx";
+import data from "./songs.json";
 
 configure({ enforceActions: "observed" });
 
@@ -17,8 +18,12 @@ class Store {
     }
   }
 
-  updateData(data) {
-    this.data = data;
+  fetchData() {
+    //fake some network lag
+    setTimeout(() => {
+      this.data = data;
+      this.hideLoader();
+    }, 1500);
   }
 
   showLoader() {

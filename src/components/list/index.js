@@ -1,10 +1,17 @@
 import React, { Component } from "react";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import ListItem from "./listItem";
 import "./list.css";
 
 class List extends Component {
+  componentDidMount() {
+    this.loadData();
+  }
+
+  loadData() {
+    this.props.store.fetchData();
+  }
   renderListItems() {
     const { isSearchFilterActive, searchKeyword, data } = this.props.store;
 
@@ -28,6 +35,6 @@ class List extends Component {
   }
 }
 
-List = observer(List);
+List = inject("store")(observer(List));
 
 export default List;

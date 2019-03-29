@@ -75,5 +75,705 @@
     "level": 6,
     "released": "2016-07-01",
     "rating": 2.7
+  },
+  {
+    "artist": "Dorothy",
+    "title": "Progenex",
+    "level": 13,
+    "released": "2018-05-28",
+    "rating": "1.2393"
+  },
+  {
+    "artist": "Jody",
+    "title": "Besto",
+    "level": 12,
+    "released": "2016-12-12",
+    "rating": "1.3148"
+  },
+  {
+    "artist": "Traci",
+    "title": "Rugstars",
+    "level": 12,
+    "released": "2018-01-29",
+    "rating": "3.8849"
+  },
+  {
+    "artist": "Estela",
+    "title": "Accidency",
+    "level": 10,
+    "released": "2014-03-13",
+    "rating": "0.3815"
+  },
+  {
+    "artist": "Sally",
+    "title": "Iplax",
+    "level": 13,
+    "released": "2017-07-17",
+    "rating": "0.9408"
+  },
+  {
+    "artist": "Henrietta",
+    "title": "Izzby",
+    "level": 12,
+    "released": "2018-07-02",
+    "rating": "4.3387"
+  },
+  {
+    "artist": "Hopkins",
+    "title": "Quordate",
+    "level": 4,
+    "released": "2018-08-11",
+    "rating": "1.9949"
+  },
+  {
+    "artist": "Rhoda",
+    "title": "Ontality",
+    "level": 10,
+    "released": "2015-08-17",
+    "rating": "4.2847"
+  },
+  {
+    "artist": "Clare",
+    "title": "Suretech",
+    "level": 11,
+    "released": "2015-07-09",
+    "rating": "4.4608"
+  },
+  {
+    "artist": "Michael",
+    "title": "Accusage",
+    "level": 11,
+    "released": "2019-03-26",
+    "rating": "0.3058"
+  },
+  {
+    "artist": "Glenna",
+    "title": "Buzzmaker",
+    "level": 5,
+    "released": "2015-05-17",
+    "rating": "1.099"
+  },
+  {
+    "artist": "Griffin",
+    "title": "Quadeebo",
+    "level": 3,
+    "released": "2014-12-19",
+    "rating": "0.794"
+  },
+  {
+    "artist": "Lynch",
+    "title": "Qnekt",
+    "level": 5,
+    "released": "2014-04-18",
+    "rating": "2.7255"
+  },
+  {
+    "artist": "Ida",
+    "title": "Netility",
+    "level": 10,
+    "released": "2019-03-01",
+    "rating": "1.9904"
+  },
+  {
+    "artist": "May",
+    "title": "Digifad",
+    "level": 12,
+    "released": "2014-05-21",
+    "rating": "3.5498"
+  },
+  {
+    "artist": "Buchanan",
+    "title": "Eschoir",
+    "level": 3,
+    "released": "2015-08-30",
+    "rating": "3.441"
+  },
+  {
+    "artist": "Newman",
+    "title": "Zensor",
+    "level": 14,
+    "released": "2018-04-02",
+    "rating": "3.6697"
+  },
+  {
+    "artist": "Hope",
+    "title": "Zipak",
+    "level": 14,
+    "released": "2014-04-12",
+    "rating": "3.3721"
+  },
+  {
+    "artist": "Vera",
+    "title": "Jamnation",
+    "level": 14,
+    "released": "2016-10-31",
+    "rating": "3.9787"
+  },
+  {
+    "artist": "Sheila",
+    "title": "Freakin",
+    "level": 9,
+    "released": "2014-10-24",
+    "rating": "4.3003"
+  },
+  {
+    "artist": "Faith",
+    "title": "Extragen",
+    "level": 4,
+    "released": "2015-10-14",
+    "rating": "3.3409"
+  },
+  {
+    "artist": "Rios",
+    "title": "Skyplex",
+    "level": 14,
+    "released": "2017-07-10",
+    "rating": "1.4685"
+  },
+  {
+    "artist": "Sykes",
+    "title": "Straloy",
+    "level": 5,
+    "released": "2018-08-26",
+    "rating": "2.6489"
+  },
+  {
+    "artist": "Salas",
+    "title": "Eventix",
+    "level": 8,
+    "released": "2017-11-19",
+    "rating": "4.7204"
+  },
+  {
+    "artist": "Araceli",
+    "title": "Irack",
+    "level": 10,
+    "released": "2015-11-06",
+    "rating": "2.199"
+  },
+  {
+    "artist": "Avery",
+    "title": "Pyramis",
+    "level": 8,
+    "released": "2016-04-14",
+    "rating": "2.4889"
+  },
+  {
+    "artist": "Wise",
+    "title": "Zanymax",
+    "level": 2,
+    "released": "2016-06-06",
+    "rating": "3.4758"
+  },
+  {
+    "artist": "Haley",
+    "title": "Quilk",
+    "level": 1,
+    "released": "2017-07-03",
+    "rating": "0.5229"
+  },
+  {
+    "artist": "Humphrey",
+    "title": "Automon",
+    "level": 10,
+    "released": "2017-09-25",
+    "rating": "4.2915"
+  },
+  {
+    "artist": "Carroll",
+    "title": "Extremo",
+    "level": 5,
+    "released": "2014-09-16",
+    "rating": "1.3642"
+  },
+  {
+    "artist": "Teri",
+    "title": "Macronaut",
+    "level": 7,
+    "released": "2015-09-10",
+    "rating": "3.2065"
+  },
+  {
+    "artist": "Mamie",
+    "title": "Conjurica",
+    "level": 7,
+    "released": "2015-02-11",
+    "rating": "4.2234"
+  },
+  {
+    "artist": "Patsy",
+    "title": "Realmo",
+    "level": 5,
+    "released": "2016-08-20",
+    "rating": "4.1548"
+  },
+  {
+    "artist": "Caroline",
+    "title": "Zillanet",
+    "level": 8,
+    "released": "2014-03-02",
+    "rating": "0.824"
+  },
+  {
+    "artist": "Burks",
+    "title": "Lyria",
+    "level": 8,
+    "released": "2015-02-25",
+    "rating": "0.9627"
+  },
+  {
+    "artist": "Lucas",
+    "title": "Ecosys",
+    "level": 9,
+    "released": "2014-12-09",
+    "rating": "0.9415"
+  },
+  {
+    "artist": "Dawn",
+    "title": "Geofarm",
+    "level": 1,
+    "released": "2014-06-21",
+    "rating": "0.0023"
+  },
+  {
+    "artist": "Mccarty",
+    "title": "Megall",
+    "level": 14,
+    "released": "2016-05-22",
+    "rating": "1.3918"
+  },
+  {
+    "artist": "Terrell",
+    "title": "Brainquil",
+    "level": 4,
+    "released": "2015-02-11",
+    "rating": "1.1802"
+  },
+  {
+    "artist": "Tammi",
+    "title": "Enaut",
+    "level": 10,
+    "released": "2018-02-01",
+    "rating": "0.4716"
+  },
+  {
+    "artist": "Luna",
+    "title": "Enersave",
+    "level": 8,
+    "released": "2014-04-25",
+    "rating": "4.5877"
+  },
+  {
+    "artist": "England",
+    "title": "Furnafix",
+    "level": 6,
+    "released": "2014-03-31",
+    "rating": "3.1403"
+  },
+  {
+    "artist": "Ayala",
+    "title": "Norsup",
+    "level": 11,
+    "released": "2018-12-09",
+    "rating": "3.793"
+  },
+  {
+    "artist": "Peck",
+    "title": "Cognicode",
+    "level": 10,
+    "released": "2018-11-28",
+    "rating": "0.3226"
+  },
+  {
+    "artist": "Bauer",
+    "title": "Marketoid",
+    "level": 7,
+    "released": "2014-01-12",
+    "rating": "3.731"
+  },
+  {
+    "artist": "Milagros",
+    "title": "Talkalot",
+    "level": 11,
+    "released": "2014-12-17",
+    "rating": "1.9002"
+  },
+  {
+    "artist": "Cassandra",
+    "title": "Nurplex",
+    "level": 15,
+    "released": "2015-04-08",
+    "rating": "2.751"
+  },
+  {
+    "artist": "Sosa",
+    "title": "Medicroix",
+    "level": 14,
+    "released": "2016-01-24",
+    "rating": "4.4528"
+  },
+  {
+    "artist": "Mcbride",
+    "title": "Anarco",
+    "level": 15,
+    "released": "2014-06-10",
+    "rating": "3.1558"
+  },
+  {
+    "artist": "Rich",
+    "title": "Zillidium",
+    "level": 7,
+    "released": "2016-11-18",
+    "rating": "4.1937"
+  },
+  {
+    "artist": "Elsa",
+    "title": "Equicom",
+    "level": 15,
+    "released": "2016-05-10",
+    "rating": "2.3434"
+  },
+  {
+    "artist": "Sears",
+    "title": "Opticall",
+    "level": 12,
+    "released": "2019-01-29",
+    "rating": "1.0898"
+  },
+  {
+    "artist": "April",
+    "title": "Emoltra",
+    "level": 9,
+    "released": "2017-09-02",
+    "rating": "2.8477"
+  },
+  {
+    "artist": "Susana",
+    "title": "Sultrax",
+    "level": 11,
+    "released": "2015-03-31",
+    "rating": "3.3823"
+  },
+  {
+    "artist": "Kenya",
+    "title": "Lotron",
+    "level": 8,
+    "released": "2015-10-04",
+    "rating": "1.1024"
+  },
+  {
+    "artist": "Opal",
+    "title": "Perkle",
+    "level": 5,
+    "released": "2016-07-01",
+    "rating": "2.2804"
+  },
+  {
+    "artist": "Deleon",
+    "title": "Aquacine",
+    "level": 5,
+    "released": "2016-09-18",
+    "rating": "1.4715"
+  },
+  {
+    "artist": "Johns",
+    "title": "Exiand",
+    "level": 11,
+    "released": "2018-07-03",
+    "rating": "3.9322"
+  },
+  {
+    "artist": "Mollie",
+    "title": "Phormula",
+    "level": 14,
+    "released": "2015-01-22",
+    "rating": "2.562"
+  },
+  {
+    "artist": "Marva",
+    "title": "Intergeek",
+    "level": 10,
+    "released": "2016-12-18",
+    "rating": "2.0804"
+  },
+  {
+    "artist": "Lakeisha",
+    "title": "Ecraze",
+    "level": 1,
+    "released": "2014-09-27",
+    "rating": "4.2239"
+  },
+  {
+    "artist": "Noble",
+    "title": "Geoforma",
+    "level": 6,
+    "released": "2016-11-18",
+    "rating": "1.8501"
+  },
+  {
+    "artist": "Day",
+    "title": "Matrixity",
+    "level": 15,
+    "released": "2016-12-30",
+    "rating": "0.7996"
+  },
+  {
+    "artist": "Rochelle",
+    "title": "Quonk",
+    "level": 10,
+    "released": "2015-03-20",
+    "rating": "4.1553"
+  },
+  {
+    "artist": "Whitley",
+    "title": "Vitricomp",
+    "level": 10,
+    "released": "2016-08-07",
+    "rating": "2.4652"
+  },
+  {
+    "artist": "Jaime",
+    "title": "Isologix",
+    "level": 6,
+    "released": "2015-06-24",
+    "rating": "2.1614"
+  },
+  {
+    "artist": "Delgado",
+    "title": "Omatom",
+    "level": 10,
+    "released": "2017-12-07",
+    "rating": "3.8871"
+  },
+  {
+    "artist": "Dunlap",
+    "title": "Miracula",
+    "level": 15,
+    "released": "2015-01-23",
+    "rating": "1.5518"
+  },
+  {
+    "artist": "Mildred",
+    "title": "Twiggery",
+    "level": 1,
+    "released": "2019-03-14",
+    "rating": "0.3475"
+  },
+  {
+    "artist": "Wells",
+    "title": "Cowtown",
+    "level": 12,
+    "released": "2014-10-02",
+    "rating": "4.7983"
+  },
+  {
+    "artist": "Mercer",
+    "title": "Isologia",
+    "level": 7,
+    "released": "2015-02-02",
+    "rating": "0.5453"
+  },
+  {
+    "artist": "Reyna",
+    "title": "Plutorque",
+    "level": 9,
+    "released": "2014-06-17",
+    "rating": "1.7897"
+  },
+  {
+    "artist": "Elnora",
+    "title": "Dentrex",
+    "level": 8,
+    "released": "2016-04-17",
+    "rating": "2.1551"
+  },
+  {
+    "artist": "Goodman",
+    "title": "Anivet",
+    "level": 3,
+    "released": "2018-10-09",
+    "rating": "3.7281"
+  },
+  {
+    "artist": "Herman",
+    "title": "Sonique",
+    "level": 8,
+    "released": "2017-07-12",
+    "rating": "0.6067"
+  },
+  {
+    "artist": "Eunice",
+    "title": "Tubalum",
+    "level": 13,
+    "released": "2014-10-29",
+    "rating": "2.0863"
+  },
+  {
+    "artist": "Odessa",
+    "title": "Orbin",
+    "level": 15,
+    "released": "2018-09-09",
+    "rating": "2.9511"
+  },
+  {
+    "artist": "Jordan",
+    "title": "Glasstep",
+    "level": 15,
+    "released": "2017-06-02",
+    "rating": "4.5689"
+  },
+  {
+    "artist": "Louise",
+    "title": "Bulljuice",
+    "level": 15,
+    "released": "2017-09-26",
+    "rating": "0.7477"
+  },
+  {
+    "artist": "Raquel",
+    "title": "Dreamia",
+    "level": 9,
+    "released": "2017-08-19",
+    "rating": "1.6041"
+  },
+  {
+    "artist": "Ray",
+    "title": "Skinserve",
+    "level": 2,
+    "released": "2016-08-10",
+    "rating": "2.4743"
+  },
+  {
+    "artist": "Floyd",
+    "title": "Zillactic",
+    "level": 10,
+    "released": "2016-03-30",
+    "rating": "2.7601"
+  },
+  {
+    "artist": "Adkins",
+    "title": "Premiant",
+    "level": 8,
+    "released": "2018-03-31",
+    "rating": "2.5387"
+  },
+  {
+    "artist": "Grant",
+    "title": "Vantage",
+    "level": 2,
+    "released": "2018-01-26",
+    "rating": "0.5536"
+  },
+  {
+    "artist": "Leblanc",
+    "title": "Melbacor",
+    "level": 2,
+    "released": "2014-10-15",
+    "rating": "2.6141"
+  },
+  {
+    "artist": "Ortega",
+    "title": "Entropix",
+    "level": 7,
+    "released": "2015-01-10",
+    "rating": "0.8053"
+  },
+  {
+    "artist": "Boyer",
+    "title": "Ohmnet",
+    "level": 15,
+    "released": "2016-03-09",
+    "rating": "1.6549"
+  },
+  {
+    "artist": "Miranda",
+    "title": "Helixo",
+    "level": 13,
+    "released": "2017-02-26",
+    "rating": "1.6376"
+  },
+  {
+    "artist": "Harrison",
+    "title": "Comdom",
+    "level": 3,
+    "released": "2018-10-14",
+    "rating": "0.7234"
+  },
+  {
+    "artist": "Kris",
+    "title": "Opticon",
+    "level": 11,
+    "released": "2019-01-17",
+    "rating": "3.2714"
+  },
+  {
+    "artist": "Rogers",
+    "title": "Imperium",
+    "level": 7,
+    "released": "2014-11-12",
+    "rating": "4.4862"
+  },
+  {
+    "artist": "Gillespie",
+    "title": "Parleynet",
+    "level": 3,
+    "released": "2016-11-19",
+    "rating": "4.6523"
+  },
+  {
+    "artist": "Jerri",
+    "title": "Envire",
+    "level": 5,
+    "released": "2017-01-22",
+    "rating": "0.2397"
+  },
+  {
+    "artist": "Weaver",
+    "title": "Telequiet",
+    "level": 6,
+    "released": "2015-03-14",
+    "rating": "1.5056"
+  },
+  {
+    "artist": "Nanette",
+    "title": "Bluegrain",
+    "level": 14,
+    "released": "2017-10-10",
+    "rating": "0.8016"
+  },
+  {
+    "artist": "Case",
+    "title": "Zilidium",
+    "level": 12,
+    "released": "2015-07-10",
+    "rating": "3.7803"
+  },
+  {
+    "artist": "Sherry",
+    "title": "Pheast",
+    "level": 6,
+    "released": "2017-03-19",
+    "rating": "3.8833"
+  },
+  {
+    "artist": "Elaine",
+    "title": "Undertap",
+    "level": 10,
+    "released": "2016-11-21",
+    "rating": "1.6086"
+  },
+  {
+    "artist": "Terry",
+    "title": "Deminimum",
+    "level": 2,
+    "released": "2014-08-17",
+    "rating": "1.4982"
+  },
+  {
+    "artist": "Claudette",
+    "title": "Gleamink",
+    "level": 9,
+    "released": "2016-09-03",
+    "rating": "4.2461"
   }
 ]

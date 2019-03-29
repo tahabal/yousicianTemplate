@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 import "./search.css";
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      filterValue: ""
-    };
 
     this.handleChange = this.handleChange.bind(this);
   }
@@ -32,6 +28,6 @@ class SearchBar extends Component {
   }
 }
 
-SearchBar = observer(SearchBar);
+SearchBar = inject("store")(observer(SearchBar));
 
 export default SearchBar;

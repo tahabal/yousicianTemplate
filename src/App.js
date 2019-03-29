@@ -1,43 +1,26 @@
 import React, { Component } from "react";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 import "./App.css";
-import appStore from "./store";
-import data from "./songs.json";
 import Header from "./components/header/";
 import List from "./components/list/";
 import Loading from "./components/loading";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true
+  render() {
+    const renderLoading = () => {
+      return this.props.store.loading && <Loading />;
     };
 
-    props = this.props;
-  }
-  async componentDidMount() {
-    //act like we're lagging all night
-    await setTimeout(() => this.loadData(), 500);
-  }
-
-  loadData() {
-    this.props.store.updateData(data);
-    this.setState({ loading: false }, this.props.store.hideLoader());
-  }
-
-  render() {
     return (
       <div className="App">
         <Header />
-        <List store={appStore} />
-        {this.props.store.loading && <Loading />}
+        <List />
+        {renderLoading()}
       </div>
     );
   }
 }
 
-App = observer(App);
+App = inject("store")(observer(App));
 
 export default App;
