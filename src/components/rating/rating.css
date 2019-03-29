@@ -1,0 +1,16 @@
+.rating-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.full-star {
+    fill: white;
+}
+
+.half-star {
+    fill: white;
+}
+
+.empty-star {
+    fill: var(--theme-star-deactive-color);
+}

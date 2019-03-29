@@ -1,4 +1,7 @@
 import React from "react";
+
+import StarRating from "../rating/";
+import LevelRing from "../level/";
 import "./list.css";
 import logo from "../../assets/logo.png";
 
@@ -27,7 +30,7 @@ const ListItem = props => {
         </div>
       </div>
       <div className="list-item-level">
-        <span>{props.data.level}</span>
+        <LevelRing level={props.data.level} />
       </div>
       <div className="list-item-info">
         <div className="list-item-title">
@@ -35,7 +38,7 @@ const ListItem = props => {
         </div>
         <div className="list-item-release-info">
           <div className="list-item-rating">
-            <span>{props.data.rating}</span>
+            <StarRating rating={props.data.rating} />
           </div>
           <div className="list-item-artist">
             <span>{props.data.artist}</span>

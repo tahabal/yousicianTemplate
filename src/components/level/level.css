@@ -1,0 +1,30 @@
+.level-container{
+    
+    position: relative;
+}
+
+.level-text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.level-circle {
+        transition: 0.35s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      
+}
+
+
+.level-circle-background {
+    transition: 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  
+}
