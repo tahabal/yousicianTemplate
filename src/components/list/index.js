@@ -6,13 +6,9 @@ import ListFilter from "./filter";
 import "./list.css";
 
 class List extends Component {
+  listContainerRef = React.createRef();
+
   async componentDidMount() {
-    //add event listener for infinite scrolling
-
-    document
-      .querySelector(".list-container")
-      .addEventListener("scroll", this.handleScroll, false);
-
     //mimic some network lag
     const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
     await fauxLag(1000);
@@ -21,15 +17,9 @@ class List extends Component {
     this.props.store.hideLoader();
   }
 
-  componentWillUnmount() {
-    document
-      .querySelector(".list-container")
-      .removeEventlistener("scroll", this.handleScroll, false);
-  }
-
   handleScroll = async () => {
     //get list element for scroll purposes, calculate stuff
-    const el = document.querySelector(".list-container");
+    const el = this.listContainerRef.current;
     let scrollY = el.scrollHeight - el.scrollTop;
     let height = el.offsetHeight;
     let offset = height - scrollY;
@@ -58,7 +48,13 @@ class List extends Component {
     return (
       <div className="list-wrapper">
         <ListFilter />
-        <div className="list-container">{this.renderListItems()}</div>
+        <div
+          ref={this.listContainerRef}
+          className="list-container"
+          onScroll={this.handleScroll}
+        >
+          {this.renderListItems()}
+        </div>
       </div>
     );
   }

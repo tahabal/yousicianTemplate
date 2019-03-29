@@ -8,33 +8,26 @@ import {
 import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 
 class StarRating extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    hoverState: null,
+    rating: this.props.rating
+  };
 
-    this.state = {
-      hoverState: null,
-      rating: props.rating
-    };
-
-    this.renderStars = this.renderStars.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(event) {
+  handleClick = event => {
     let newRating = event.currentTarget.getAttribute("data-rating");
     this.setState({
       rating: newRating
     });
-  }
+  };
 
-  renderStars(full, half, empty) {
+  renderStars = (full, half, empty) => {
     let counter = 0;
     let arr = [];
 
     for (let i = 0; i < full; i++) {
       counter++;
       arr.push(
-        <div onClick={this.handleClick} data-rating={counter}>
+        <div key={"full" + i} onClick={this.handleClick} data-rating={counter}>
           <FontAwesomeIcon
             icon={faStarFull}
             key={counter}
@@ -47,7 +40,7 @@ class StarRating extends Component {
     for (let i = 0; i < half; i++) {
       counter++;
       arr.push(
-        <div onClick={this.handleClick} data-rating={counter}>
+        <div key={"half" + i} onClick={this.handleClick} data-rating={counter}>
           <FontAwesomeIcon
             icon={faStarHalf}
             key={counter}
@@ -61,7 +54,7 @@ class StarRating extends Component {
     for (let i = 0; i < empty; i++) {
       counter++;
       arr.push(
-        <div onClick={this.handleClick} data-rating={counter}>
+        <div key={"empty" + i} onClick={this.handleClick} data-rating={counter}>
           <FontAwesomeIcon
             icon={faStarEmpty}
             key={counter}
@@ -73,7 +66,7 @@ class StarRating extends Component {
     }
 
     return arr;
-  }
+  };
 
   render() {
     let rating = Math.round(this.state.rating * 2) / 2;

@@ -6,46 +6,30 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./list.css";
 
 class ListFilter extends Component {
-  constructor(props) {
-    super(props);
+  handleClick = (selectedLevel, event) => {
+    let isActive = this.props.store.currentLevelFilterValue === selectedLevel;
 
-    this.renderFilterItems = this.renderFilterItems.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(event) {
-    let selectedLevel = event.currentTarget.getAttribute("data-level");
-    let isActive = event.currentTarget.getAttribute("isactive");
-
-    let activeClass = "list-filter-item list-filter-item-active";
-    let inactiveClass = "list-filter-item";
-
-    switch (isActive) {
-      case "true":
-        this.props.store.changeLevelFilter(null);
-        event.currentTarget.className = inactiveClass;
-        event.currentTarget.setAttribute("isactive", "false");
-        break;
-      case "false":
-        this.props.store.changeLevelFilter(selectedLevel);
-        document.querySelectorAll(".list-filter-item").forEach(item => {
-          item.className = inactiveClass;
-        });
-        event.currentTarget.setAttribute("isactive", "true");
-        event.currentTarget.className = activeClass;
+    if (isActive) {
+      this.props.store.changeLevelFilter(null);
+    } else {
+      this.props.store.changeLevelFilter(selectedLevel);
     }
-  }
+  };
 
-  renderFilterItems() {
+  renderFilterItems = () => {
     let arr = [];
 
     for (let i = 15; i >= 1; i--) {
+      let isActive = this.props.store.currentLevelFilterValue === i;
       let item = (
         <div
-          className="list-filter-item"
-          isactive="false"
-          data-level={i}
-          onClick={this.handleClick}
+          className={
+            "list-filter-item " +
+            (isActive
+              ? "list-filter-item list-filter-item-active"
+              : "list-filter-item")
+          }
+          onClick={event => this.handleClick(i, event)}
           key={i}
         >
           <span className="list-filter-item-text">{i}</span>
@@ -56,7 +40,7 @@ class ListFilter extends Component {
     }
 
     return arr;
-  }
+  };
 
   render() {
     return (

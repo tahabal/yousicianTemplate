@@ -3,15 +3,9 @@ import { observer, inject } from "mobx-react";
 import "./search.css";
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
+  handleChange = event => {
     this.props.store.handleSearch(event.target.value);
-  }
+  };
 
   render() {
     return (
