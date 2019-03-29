@@ -1,17 +1,30 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
-import appStore from "../../store";
 
 import ListItem from "./listItem";
 import "./list.css";
 
 class List extends Component {
+  renderListItems() {
+    const { isSearchFilterActive, searchKeyword, data } = this.props.store;
+
+    console.log("test");
+
+    let dataToRender = isSearchFilterActive
+      ? data.filter(
+          val =>
+            val.title.toLocaleLowerCase("en-EN").includes(searchKeyword) ||
+            val.artist.toLocaleLowerCase("en-EN").includes(searchKeyword)
+        )
+      : data;
+
+    return dataToRender.map(item => {
+      return <ListItem data={item} />;
+    });
+  }
+
   render() {
-    const data = appStore.data;
-
-    console.log(data);
-
-    return <div />;
+    return <div className="list-container">{this.renderListItems()}</div>;
   }
 }
 

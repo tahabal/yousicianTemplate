@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import SearchBar from "../search/";
 import "./header.css";
-import logo from "./logo.png";
+import appStore from "../../store";
+import logo from "../../assets/logoText.png";
 
 class Header extends Component {
   render() {
@@ -11,7 +12,7 @@ class Header extends Component {
           <img src={logo} className="header-logo" alt="header logo" />
         </div>
 
-        <SearchBar />
+        <SearchBar store={appStore} />
       </div>
     );
 

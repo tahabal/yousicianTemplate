@@ -6,9 +6,15 @@ class Store {
   searchKeyword = "";
   data = [];
   loading = true;
+  isSearchFilterActive = false;
 
   handleSearch(keyword) {
     this.searchKeyword = keyword;
+    if (keyword === "") {
+      this.isSearchFilterActive = false;
+    } else {
+      this.isSearchFilterActive = true;
+    }
   }
 
   updateData(data) {
@@ -20,7 +26,6 @@ class Store {
   }
 
   hideLoader() {
-    console.log("test");
     this.loading = false;
   }
 }

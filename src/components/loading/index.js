@@ -1,6 +1,6 @@
 import React from "react";
 import "./loading.css";
-import image from "./fingerprint-white.png";
+import image from "../../assets/logo.png";
 
 const Loading = () => {
   return (

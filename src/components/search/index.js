@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
-import appStore from "../../store";
 import "./search.css";
 
 class SearchBar extends Component {
@@ -15,7 +14,7 @@ class SearchBar extends Component {
   }
 
   handleChange(event) {
-    appStore.handleSearch(event.target.value);
+    this.props.store.handleSearch(event.target.value);
   }
 
   render() {
@@ -25,7 +24,7 @@ class SearchBar extends Component {
           type="text"
           className="searchBar"
           placeholder="Enter search parameters."
-          value={appStore.searchKeyword}
+          value={this.props.store.searchKeyword}
           onChange={this.handleChange}
         />
       </div>

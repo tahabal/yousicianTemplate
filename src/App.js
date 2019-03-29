@@ -19,7 +19,7 @@ class App extends Component {
   }
   async componentDidMount() {
     //act like we're lagging all night
-    await setTimeout(() => this.loadData(), 5000);
+    await setTimeout(() => this.loadData(), 500);
   }
 
   loadData() {
@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <List />
+        <List store={appStore} />
         {this.props.store.loading && <Loading />}
       </div>
     );

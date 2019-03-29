@@ -1,4 +1,5 @@
-[{
+[
+  {
     "artist": "The Yousicians",
     "title": "Lycanthropic Metamorphosis",
     "level": 13,
@@ -8,7 +9,7 @@
   {
     "artist": "The Yousicians",
     "title": "A New Kennel",
-    "level": 9,
+    "level": 15,
     "released": "2010-02-03",
     "rating": 2.3
   },
@@ -50,7 +51,7 @@
   {
     "artist": "The Yousicians",
     "title": "Alabama Sunrise",
-    "level": 6,
+    "level": 15,
     "released": "2016-04-01",
     "rating": 4.6
   },

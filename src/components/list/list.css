@@ -1,0 +1,125 @@
+.list-container {
+  background-color: var(--theme-list-background-color);
+}
+
+.list-item-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding: 5px;
+  border-bottom: 1px solid var(--theme-list-seperator-color);
+  transition: 0.2s all;
+}
+
+.list-item-max-level {
+  background-image: linear-gradient(
+    45deg,
+    transparent 95%,
+    var(--theme-company-primary-color) 5%
+  );
+}
+
+.list-item-max-level-text {
+  white-space: pre-wrap;
+  color: white;
+  transform: rotate(45deg) translate(20%, 25%);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.list-item-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list-item-container:hover .list-item-logo-container {
+  transform: translateX(10px);
+}
+
+.list-item-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  transition: 0.2s all;
+}
+
+.list-item-logo {
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: var(--theme-company-primary-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-logo-img {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+  align-self: center;
+}
+
+.list-item-level {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-info {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-size: 1.2rem;
+}
+
+.list-item-release-info {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.list-item-rating {
+}
+
+.list-item-artist {
+  color: var(--theme-subtext-color);
+}
+
+.list-item-release-date {
+  color: var(--theme-subtext-color);
+}
+
+@media screen and (max-width: 760px) {
+  .list-item-container {
+    height: 60px;
+  }
+
+  .list-item-logo-container {
+    flex: 1;
+    width: 60px;
+  }
+
+  .list-item-logo {
+    height: 50px;
+  }
+
+  .list-item-release-info {
+    width: 100%;
+  }
+}

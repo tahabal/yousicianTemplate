@@ -1,6 +1,12 @@
 :root {
   --theme-header-color: black;
-  --theme-background-color: #111;
+  --theme-background-color: #0e0f12;
+  --theme-company-primary-color: #6fc13e;
+  --theme-subtext-color: #878789;
+  --theme-star-active-color: #ddeaff;
+  --theme-star-deactive-color: #575c66;
+  --theme-list-background-color: #0e0f12;
+  --theme-list-seperator-color: #212326;
 }
 
 .App {
@@ -8,4 +14,8 @@
   background-color: var(--theme-background-color);
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
