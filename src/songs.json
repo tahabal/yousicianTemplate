@@ -1,0 +1,78 @@
+[{
+    "artist": "The Yousicians",
+    "title": "Lycanthropic Metamorphosis",
+    "level": 13,
+    "released": "2016-10-26",
+    "rating": 5
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "A New Kennel",
+    "level": 9,
+    "released": "2010-02-03",
+    "rating": 2.3
+  },
+  {
+    "artist": "Mr Fastfinger",
+    "title": "Awaki-Waki",
+    "level": 13,
+    "released": "2012-05-11",
+    "rating": 3
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "You've Got The Power",
+    "level": 13,
+    "released": "2014-12-20",
+    "rating": 4.4
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Wishing In The Night",
+    "level": 9,
+    "released": "2016-01-01",
+    "rating": 1.6
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Opa Opa Ta Bouzoukia",
+    "level": 13,
+    "released": "2013-04-27",
+    "rating": 4
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Greasy Fingers - boss level",
+    "level": 3,
+    "released": "2016-03-01",
+    "rating": 3.5
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Alabama Sunrise",
+    "level": 6,
+    "released": "2016-04-01",
+    "rating": 4.6
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Can't Buy Me Skills",
+    "level": 9,
+    "released": "2016-05-01",
+    "rating": 5
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Vivaldi Allegro Mashup",
+    "level": 13,
+    "released": "2016-06-01",
+    "rating": 2
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Babysitting",
+    "level": 6,
+    "released": "2016-07-01",
+    "rating": 2.7
+  }
+]

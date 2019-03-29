@@ -1,0 +1,37 @@
+.searchBar-container {
+  background-color: var(--theme-header-color);
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.searchBar {
+  box-sizing: border-box;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid #6fc13e;
+  background-color: transparent;
+  height: 37px;
+  padding-left: 8px;
+  outline: none;
+  width: 250px;
+  opacity: 0.6;
+
+  transition: 0.2s all;
+}
+
+.searchBar:focus,
+.searchBar:hover {
+  opacity: 1;
+}
+
+.searchBar::placeholder {
+  color: #777;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+  .searchBar {
+    width: 100vw;
+  }
+}
