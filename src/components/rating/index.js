@@ -13,6 +13,7 @@ class StarRating extends Component {
     rating: this.props.rating
   };
 
+  //handles rating updates. currentnly the only function is to change the shown rating, since i am not operating through an API, and filesystem events on browser side are, well, you know.
   handleClick = event => {
     let newRating = event.currentTarget.getAttribute("data-rating");
     this.setState({
@@ -20,6 +21,7 @@ class StarRating extends Component {
     });
   };
 
+  //logic for rendering the actual stars
   renderStars = (full, half, empty) => {
     let counter = 0;
     let arr = [];

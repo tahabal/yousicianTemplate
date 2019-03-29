@@ -14,6 +14,7 @@ class ListFilter extends Component {
     const fauxLag = ms => new Promise(resolve => setTimeout(resolve, ms));
     await fauxLag(400);
 
+    //check if selected level is active or not
     if (isActive) {
       this.props.store.changeLevelFilter(null);
     } else {
@@ -23,6 +24,7 @@ class ListFilter extends Component {
     this.props.store.hideLoader();
   };
 
+  //for rendering the filter options
   renderFilterItems = () => {
     let arr = [];
 
