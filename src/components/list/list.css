@@ -1,7 +1,84 @@
+.list-wrapper{
+    height: calc(100% - 40px);
+    display:flex;
+
+    flex:1;
+}
 .list-container {
   background-color: var(--theme-list-background-color);
   overflow-y:scroll;
-  height: calc(100% - 40px)
+  height: 100%;
+  flex:1;
+  
+}
+
+.list-filter-container {
+    position:relative;
+    height: 100%;
+    width: 20px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    
+    border-right: 1px solid var(--theme-list-seperator-color);
+    background-color: var(--theme-list-background-color);
+
+    transition: .2s all;
+}
+.list-filter-container:hover{
+    width: 70px;
+}
+
+.list-filter-container:hover .list-filter-arrow {
+    transform: rotate(180deg);
+}
+
+.list-filter-container:hover .list-filter-items {
+    display: initial;
+}
+
+.list-filter-items {
+    display:flex;
+    flex-direction: column;
+    display:none;
+    overflow-y: auto;
+}
+
+.list-filter-item {
+    width: 60px;
+    height: 60px;
+    display: flex;
+
+    cursor: pointer;
+
+    transition: .2s all;
+
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--theme-list-seperator-color);
+}
+
+.list-filter-item-active {
+    background-color: var(--theme-company-primary-color)
+}
+
+
+.list-filter-item-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+
+.list-filter-arrow {
+    transition: .2s all;
+}
+
+.list-filter-arrow-container{
+    height: 100%;
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .list-item-container {
@@ -38,6 +115,7 @@
 }
 
 .list-item-max-level-text {
+    text-align:center;
   white-space: pre-wrap;
   color: white;
   transform: rotate(45deg) translate(20%, 25%);
@@ -81,10 +159,10 @@
 }
 
 .list-item-level {
-  flex: 1;
+  flex: 0.5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .list-item-info {
@@ -132,6 +210,10 @@
 }
 
 @media screen and (max-width: 760px) {
+    .list-filter-container {
+        display:none;
+    }
+
   .list-item-container {
     height: 60px;
   }

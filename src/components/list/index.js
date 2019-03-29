@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { observer, inject } from "mobx-react";
 
 import ListItem from "./listItem";
+import ListFilter from "./filter";
 import "./list.css";
 
 class List extends Component {
@@ -54,7 +55,12 @@ class List extends Component {
   }
 
   render() {
-    return <div className="list-container">{this.renderListItems()}</div>;
+    return (
+      <div className="list-wrapper">
+        <ListFilter />
+        <div className="list-container">{this.renderListItems()}</div>
+      </div>
+    );
   }
 }
 

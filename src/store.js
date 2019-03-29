@@ -9,6 +9,7 @@ class Store {
   loading = true;
   isSearchFilterActive = false;
   loadedDataCount = 0;
+  currentLevelFilterValue = null;
 
   handleSearch(keyword) {
     this.searchKeyword = keyword;
@@ -20,23 +21,49 @@ class Store {
     this.fetchData();
   }
 
+  //level filter handler
+  changeLevelFilter(val) {
+    this.currentLevelFilterValue = val;
+    this.fetchData();
+  }
+
+  filterByKeyword(data) {
+    let container = data.filter(
+      val =>
+        val.title.toLocaleLowerCase("en-EN").includes(this.searchKeyword) ||
+        val.artist.toLocaleLowerCase("en-EN").includes(this.searchKeyword)
+    );
+
+    return container;
+  }
+
+  filterByLevel(data) {
+    let container = data.filter(
+      val => val.level == this.currentLevelFilterValue
+    );
+
+    return container;
+  }
+
   //data fetching logic
   fetchData() {
+    console.log("test");
+    let container;
     switch (this.isSearchFilterActive) {
       case true:
-        this.data = data
-          .filter(
-            val =>
-              val.title
-                .toLocaleLowerCase("en-EN")
-                .includes(this.searchKeyword) ||
-              val.artist.toLocaleLowerCase("en-EN").includes(this.searchKeyword)
-          )
-          .slice(0, 15);
+        container = this.filterByKeyword(data);
+        this.currentLevelFilterValue &&
+          (container = this.filterByLevel(container));
+
+        this.data = container.slice(0, 15);
         this.loadedDataCount = this.data.length;
         break;
       case false:
-        this.data = data.slice(0, 15);
+        container = data;
+        this.currentLevelFilterValue &&
+          (container = this.filterByLevel(container));
+
+        this.data = container.slice(0, 15);
         this.loadedDataCount = this.data.length;
         break;
       default:
@@ -52,7 +79,6 @@ class Store {
       return;
     }
 
-    console.log("CALLED");
     let moreData;
     switch (this.isSearchFilterActive) {
       case true:
@@ -91,6 +117,8 @@ class Store {
 
 decorate(Store, {
   searchKeyword: observable,
+  currentLevelFilterValue: observable,
+  changeLevelFilter: action,
   handleSearch: action,
   loading: observable,
   data: observable,
